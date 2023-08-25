@@ -1,0 +1,35 @@
+{
+  "num_trials": 20,
+  "hyperparameters": [
+    {
+      "name": "n_estimators",
+      "short_desc": "The number of trees in the forest.",
+      "type": "int",
+      "search_type": "uniform",
+      "range_low": 50,
+      "range_high": 300
+    },
+    {
+      "name": "criterion",
+      "short_desc": "The function to measure the quality of a split. Supported criteria are 'gini' for the Gini impurity and 'log_loss' and 'entropy' both for the Shannon information gain",
+      "type": "categorical",
+      "categories": ["gini", "entropy"]
+    },
+    {
+      "name": "min_samples_split",
+      "short_desc": "The minimum number of samples required to split an internal node",
+      "type": "int",
+      "search_type": "uniform",
+      "range_low": 2,
+      "range_high": 10
+    },
+    {
+      "name": "min_samples_leaf",
+      "short_desc": "The minimum number of samples required to be at a leaf node.",
+      "type": "int",
+      "search_type": "uniform",
+      "range_low": 1,
+      "range_high": 8
+    }
+  ]
+}
